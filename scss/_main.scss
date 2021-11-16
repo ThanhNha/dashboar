@@ -1,0 +1,193 @@
+.main.active{
+    width: calc(100% - 7rem);
+    left: 8rem;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 25rem);
+    left: 25rem;
+    background: #fff;
+    transition: .5s;
+    padding: .5rem 2rem;
+    .topbar{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        .toggle{
+            cursor: pointer;
+            font-size: 3rem;
+        }
+    }
+    .form{
+        position: relative;
+        border: $boder;
+        border-radius: 40rem;
+        width: 30rem;
+        background: #fff;
+        padding: 0 2rem;
+        input{
+            border: none;
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+        }
+        
+        label{
+            position: absolute;
+            top: .7rem ;
+            left: 1rem;
+            font-size: 2rem;
+        }
+    }
+    .user img{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
+}
+
+.card{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 1.5rem;
+    // display:flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // flex-wrap: wrap;
+    // gap: 1.5rem;
+    &-box{
+        padding: 3rem;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        box-shadow: $shadow;
+        border-radius: 2rem;
+        transition: .3s linear;
+        h3{
+            font-size: 2rem;
+            color: $green-dark;
+        }
+        p{
+            font-size: 1.2rem;
+        };
+        .card-icon{
+            font-size: 3rem;
+            color: $green-dark;
+        }
+    }
+    &-box:hover{
+        background: $green-light;
+    }
+    &-box:hover h3,
+    &-box:hover p,
+    &-box:hover .card-icon{
+        color: #fff;
+    }
+    
+}
+
+.order{
+    margin-top: 2rem;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+    &-left{
+        flex: 1 1;
+        padding: 2rem;
+        width: 70%;
+        background: #fff;
+        box-shadow: $shadow;
+        border-radius: 1.5rem;
+    }
+    
+
+    &-heading{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        h3{
+            text-transform: capitalize;
+            font-size: 1.7rem;
+            color: $green-light;
+
+        }
+        
+    }
+    &-table{
+        width: 100%;
+        margin-top: 4rem;
+        transition: .3s linear;
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            thead tr td{
+                font-weight: 700;
+                font-size: 1.3rem;
+                padding: 1rem 0;
+            }
+            tbody tr{
+                
+                border-bottom: $boder;
+            }
+            tbody tr:last-child{
+                border :none;
+            }
+            tbody tr td{
+                font-size: 1.2rem;
+                padding: .5rem 0;
+            }
+               
+            
+            tbody tr:hover{
+                background: $green-light;
+                color: #fff;
+                border-radius: 2rem;
+            }
+            tbody tr td:first-child{
+            padding-left: .5rem;
+                text-align: start;
+            }
+            tbody tr td:nth-child(3), thead tr td:nth-child(3){
+                text-align: center;
+            }
+            tbody tr td:nth-child(2), thead tr td:nth-child(2){
+                text-align: end;
+            }
+            tbody tr td:nth-child(4), thead tr td:nth-child(4){
+                text-align: end;
+                padding-right: .5rem;
+               
+            }
+        }
+    }
+    &-right{
+        width: 30%;
+        padding: 2rem;
+        background: #fff;
+        box-shadow: $shadow;
+        border-radius: 1.5rem;
+        flex: 1 1;
+        .order-table{
+            width: 100%;
+            .content{
+                display: inline-block;
+                h3,p{
+                    text-transform: capitalize;
+                }
+            }
+            img{
+                margin-right: 1.5rem;
+                border-radius: 50%;
+                width: 4rem;
+                height: 4rem;
+            }
+            tbody tr {
+                border: none;
+            }
+        }
+    }
+}
